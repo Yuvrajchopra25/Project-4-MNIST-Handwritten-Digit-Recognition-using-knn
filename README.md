@@ -20,7 +20,7 @@ Samples provided from MNIST (Modified National Institute of Standards and Techno
 - Numpy
 - Matplotlib
 
-### KNeighborsClassifier (KNN):
+## KNeighborsClassifier (KNN):
 - Simplest Machine learning Algorithm you will find in Machine Learning
 - Brute Force Approach is used in it. (Hence Act as a **Baseline** , if you use any other algo then that algo must have accuracy better than KNN)
 - Complexity O( M*N + (M + klogM) + k ) per Query => if dataset is Large, this is gonna take much time to execute, where M is number of samples and N is number of features in each sample.
