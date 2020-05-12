@@ -11,7 +11,6 @@ This is the famous MNIST Machine Learning project in which we have to predict ha
 ## Requirements:
 - Jupyter Notebook
 
-
 ## MNIST Dataset
 Samples provided from MNIST (Modified National Institute of Standards and Technology) dataset includes handwritten digits total of 70,000 images consisting of 60,000 examples in training set and 10,000 examples in testing set, both with labeled images from 10 digits (0 to 9). This is a small segment form the wide set from NIST where size was normalized to fit a 2020 pixel box and not altering the aspect ratio. Handwritten digits are images in the form of 28 * 28 gray scale intensities of images representing an image along with the first column to be a label (0 to 9) for every image. The same has opted for the case of the testing set as 10,000 images with a label of 0 to 9.
 ![](https://corochann.com/wp-content/uploads/2017/02/mnist_plot-800x600.png)
@@ -39,6 +38,23 @@ If k = 1, then the object is simply assigned to the class of that single nearest
 This value is the average of the values of its k nearest neighbors.
 
 ![](https://images.squarespace-cdn.com/content/v1/55ff6aece4b0ad2d251b3fee/1465017787823-KXFG6O0MU5NWYF8EI6UU/ke17ZwdGBToddI8pDm48kICIavOU0GBCWw19s1p5lSVZw-zPPgdn4jUwVcJE1ZvWULTKcsloFGhpbD8VGAmRSUJFbgE-7XRK3dMEBRBhUpycqPLetyMM_eWnzi1H9kYzvMtuY8jA9E1WuBOqLarM1WXLSloz6LILkqH1WHTAqb8/image-asset.png)
+
+### ALGO
+<ol>
+    <li>Find distance of query point from all other point in dataset and store in as a list of tuple (distance,value OR label).</li>
+    <li>Sort the list based on distance.</li>
+    <li>Take first k-smallest or nearest elements from the sorted list.</li>
+    <li>If problem is classification:-
+        <ol>
+            <li>Take the majority Vote Label and assigned to our Query Point.</li>
+        </ol>
+    </li>
+    <li>If problem is Regression:-
+        <ol>
+            <li>Take the mean of values and assigned to our Query Point.</li>
+        </ol>
+    </li>
+</ol>
 
 ## Score:
 For this model, the accuracy on the test set is **0.98**, which means the model made the right prediction for **98%** of the handwritten digits in the given dataset. We can expect the model to be correct **98%** of the time for predicting the handwritten digits.
